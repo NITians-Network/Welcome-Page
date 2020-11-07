@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+html {
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #294b67;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.section {
+	min-height: 100vh;
+	width: 100%;
+	scroll-snap-align: start;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	padding: 40px 80px;
+	color: white;
+	text-align: center;
+}
+
+.section > span {
+	font-size: clamp(15px, 1vw, 30px);
+	font-family: "Montserrat", cursive;
+	margin: 10px 0;
+}
+
+.section h1 {
+	font-family: "Abril Fatface", cursive;
+	font-size: clamp(30px, 5vw, 80px);
+	letter-spacing: 8px;
+	margin: 0;
+}
+
+.section h2 {
+	font-family: "Montserrat", cursive;
+	font-size: clamp(35px, 4vw, 80px);
+	font-weight: 600;
+	letter-spacing: 8px;
+	margin: 0;
+	text-align: left;
+}
+
+.section h3 {
+	opacity: 0.8;
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(20px, 2vw, 40px);
+	margin: 10px 0 5px 0;
+}
+
+.section p {
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(20px, 2vw, 40px);
+}
+
+.section ol {
+	text-align: left;
+	/* padding: 0; */
+	font-size: clamp(20px, 2vw, 40px);
+	font-family: "Montserrat", sans-serif;
+}
+
+.section ol li {
+	margin: 20px 0;
+}
+
+.flex-container {
+	width: 75%;
+	padding: 20px 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.flex-container span {
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(20px, 2vw, 40px);
+	margin: 15px;
+	padding: 10px;
+	border-bottom: 2px solid white;
+}
+
+.section.five .flex-container {
+	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.section {
+		padding: 40px 25px;
+	}
+}
+
+.section.two {
+	background-color: #59405c;
+}
+
+.section.three {
+	background-color: #0f3460;
+}
+
+.section.four {
+	background-color: #84142d;
+}
+
+.section.five {
+	background-color: #222831;
+}
+
+.section.six {
+	background-color: #32407b;
+}
+
+.section.seven {
+	background-color: #a72693;
+}
+
+.section.eight {
+	background-color: #83142c;
+}
+
+.section.nine {
+	background-color: gray;
+}
+
+.section.nine img {
+	width: 250px;
+	margin: 20px 0;
+}
+
+/* comets animations */
+
+#comets {
+	position: fixed;
+	top: -150px;
+	width: 100vw;
+	text-align: left;
+	height: 100%;
+	min-height: 900px;
+	overflow: hidden;
+	z-index: -1;
+}
+
+#comets i {
+	display: inline-block;
+	width: 250px;
+	height: 150px;
+	position: absolute;
+	border-radius: 5% 40% 70%;
+	box-shadow: inset 0px 0px 1px #294b67;
+	border: 1px solid #333;
+	z-index: 1;
+	background-color: #fff;
+	opacity: 0.7;
+	animation: falling 10s 0s infinite;
+	animation-timing-function: ease-in;
+}
+
+#comets i:nth-child(1) {
+	left: 50vw;
+	height: 73px;
+	width: 3px;
+	background-color: #fff;
+}
+#comets i:nth-child(3) {
+	height: 11px;
+	width: 3px;
+	animation: falling3 8s 3s infinite;
+	left: 10vw;
+	background-color: #fff;
+}
+#comets i:nth-child(2) {
+	animation: falling2 6s 1s infinite;
+	left: 30vw;
+	height: 70px;
+	width: 4px;
+	background-color: #fff;
+}
+
+@keyframes falling {
+	0% {
+		-webkit-transform: translate3d(100px, 0px, 0px) rotate(160deg);
+	}
+
+	3% {
+		-webkit-transform: translate3d(450px, 900px, 0) rotate(160deg);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translate3d(450px, 900px, 0) rotate(160deg);
+		opacity: 0;
+	}
+}
+
+@keyframes falling3 {
+	0% {
+		transform: translate3d(0, 0, 0) rotate(150deg);
+	}
+
+	10% {
+		transform: translate3d(430px, 640px, 0) rotate(150deg);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate3d(430px, 640px, 0) rotate(150deg);
+		opacity: 0;
+	}
+}
+
+@keyframes falling2 {
+	0% {
+		transform: translate3d(100px, 0, 0) rotate(130deg);
+	}
+
+	15% {
+		transform: translate3d(800px, 580px, 0) rotate(130deg);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate3d(800px, 680px, 0) rotate(180deg);
+		opacity: 0;
+	}
+}
