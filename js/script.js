@@ -1,5 +1,5 @@
 var txt1 = "If you want to go quickly, go alone.";
-var txt2 = "If you want to go far, go togather.";
+var txt2 = "If you want to go far, go together.";
 var speed = 90; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter(text, id, i = 0) {
